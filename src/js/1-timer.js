@@ -14,7 +14,6 @@ const secondsEl = document.querySelector('[data-seconds]');
 let userSelectedDate = null;
 let timerId = null;
 
-// Кнопка неактивна спочатку
 startBtn.disabled = true;
 
 const options = {

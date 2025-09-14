@@ -9,7 +9,6 @@ form.addEventListener('submit', e => {
   const delay = Number(form.elements.delay.value.trim());
   const state = form.elements.state.value;
 
-  // створюємо проміс
   const promise = new Promise((resolve, reject) => {
     setTimeout(() => {
       if (state === 'fulfilled') {
@@ -20,7 +19,6 @@ form.addEventListener('submit', e => {
     }, delay);
   });
 
-  // обробляємо результат
   promise
     .then(delay => {
       iziToast.success({
@@ -37,6 +35,5 @@ form.addEventListener('submit', e => {
       });
     });
 
-  // очищаємо форму
   form.reset();
 });
